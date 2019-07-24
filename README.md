@@ -23,7 +23,7 @@ In 2019.<br>
 The repository offers the implementation of our paper in PyTorch.
 
 ![LocalGlobalGAN demo](https://github.com/Ha0Tang/GestureGAN/blob/master/imgs/demo_results.gif)
-LGGAN for arbitrary cross-view image tranlation task proposed in [SelectionGAN](https://arxiv.org/abs/1904.06807). Given an image and some novel semantic maps, LGGAN is able to generate the same scene but with different viewpoints.
+LGGAN for arbitrary cross-view image tranlation task. Given an image and some novel semantic maps, LGGAN is able to generate the same scene but with different viewpoints from both local and global levels.
 
 ### [License](./LICENSE.md)
 
