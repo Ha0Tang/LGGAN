@@ -229,10 +229,10 @@ This source code is inspired by [SelectionGAN](https://github.com/Ha0Tang/Select
 
 ## Related Projects
 
-- [Multi-Channel Attention Selection GAN with Cascaded Semantic Guidance for Cross-View Image Translation (CVPR 2019, PyTorch)](https://github.com/Ha0Tang/SelectionGAN)
-- [Cross-View Image Synthesis using Conditional GANs (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
-- [Image-to-Image Translation with Conditional Adversarial Networks (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
-- [Predicting Ground-Level Scene Layout from Aerial Imagery (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet)
+- [SelectionGAN (CVPR 2019, PyTorch)](https://github.com/Ha0Tang/SelectionGAN)
+- [X-Fork & X-Seq (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
+- [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
+- [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet)
 
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
