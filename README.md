@@ -2,7 +2,7 @@
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 [![Packagist](https://img.shields.io/badge/Pytorch-0.4.1-red.svg)]()
 
-![LocalGlobalGAN demo](https://github.com/Ha0Tang/GestureGAN/blob/master/imgs/view_results.gif)
+![LocalGlobalGAN demo](https://github.com/Ha0Tang/GestureGAN/blob/master/imgs/demo_results.gif)
 GestureGAN for cross-view image tranlation task. Given an image and some novel semantic maps, GestureGAN is able
 to generate the same scene but with different viewpoints.
 
