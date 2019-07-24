@@ -6,7 +6,7 @@
 GestureGAN for cross-view image tranlation task. Given an image and some novel semantic maps, GestureGAN is able
 to generate the same scene but with different viewpoints.
 
-# LocalGlobalGAN for Cross-View Image Translation
+# Local and Global GAN (LGGAN) for Cross-View Image Translation
 
 ## LocalGlobalGAN Framework
 ![Framework](./imgs/LocalGlobalGAN_framework.jpg)
