@@ -13,7 +13,7 @@ to generate the same scene but with different viewpoints.
 
 ## Local Class-Specific Generator
 <p align="center">
-  <img src='./imgs/Local_Generator.jpg' align="middle" width=420/>
+  <img src='./imgs/Local_Generator.jpg' align="middle" width=500/>
 </p>
 
 ### [Paper](https://arxiv.org/abs/1808) | [Project page](http://disi.unitn.it/~hao.tang/project/LocalGlobalGAN.html)
