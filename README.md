@@ -103,16 +103,10 @@ New models can be trained with the following commands.
 
 2. Train.
 
-For NTU dataset:
+For SVA dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=3,4;
 python train.py --dataroot ./datasets/ntu --name ntu_gesturegan_twocycle --model gesturegan_twocycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0,1 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --lambda_L1 800 --cyc_L1 0.1 --lambda_identity 0.01 --lambda_feat 1000 --display_id 0 --niter 10 --niter_decay 10;
-```
-
-For Senz3D dataset:
-```bash
-export CUDA_VISIBLE_DEVICES=5,7;
-python train.py --dataroot ./datasets/senz3d --name senz3d_gesturegan_twocycle --model gesturegan_twocycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0,1 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --lambda_L1 800 --cyc_L1 0.1 --lambda_identity 0.01 --lambda_feat 1000 --display_id 0 --niter 10 --niter_decay 10;
 ```
 
 For CVUSA dataset:
@@ -158,14 +152,9 @@ To fine-tune a pre-trained model, or resume the previous training, use the `--co
 
 Testing is similar to testing pretrained models.
 
-For NTU dataset:
+For SVA dataset:
 ```bash
 python test.py --dataroot ./datasets/ntu --name ntu_gesturegan_twocycle --model gesturegan_twocycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip;
-```
-
-For Senz3D dataset:
-```bash
-python test.py --dataroot ./datasets/senz3d --name senz3d_gesturegan_twocycle --model gesturegan_twocycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip;
 ```
 
 For CVUSA dataset:
