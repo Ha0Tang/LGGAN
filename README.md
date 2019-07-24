@@ -2,11 +2,7 @@
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 [![Packagist](https://img.shields.io/badge/Pytorch-0.4.1-red.svg)]()
 
-![LocalGlobalGAN demo](https://github.com/Ha0Tang/LocalGlobalGAN/blob/master/imgs/LocalGlobalGAN_results.gif)
-GestureGAN for hand gesture-to-gesture tranlation task. Given an image and some novel hand skeletons, GestureGAN is able
-to generate the same person but with different hand gestures.
-
-![GestureGAN demo](https://github.com/Ha0Tang/GestureGAN/blob/master/imgs/view_results.gif)
+![LocalGlobalGAN demo](https://github.com/Ha0Tang/GestureGAN/blob/master/imgs/view_results.gif)
 GestureGAN for cross-view image tranlation task. Given an image and some novel semantic maps, GestureGAN is able
 to generate the same scene but with different viewpoints.
 
@@ -16,7 +12,7 @@ to generate the same scene but with different viewpoints.
 ![Framework](./imgs/LocalGlobalGAN_framework.jpg)
 
 ## Local Class-Specific Generator
-![Local Generator](./imgs/comparison.jpg)
+![Local Generator](./imgs/Local_Generator.jpg)
 
 ### [Conference paper](https://arxiv.org/abs/1808.04859) | [Project page (Conference paper)](http://disi.unitn.it/~hao.tang/project/GestureGAN.html) | [Slides](http://disi.unitn.it/~hao.tang/uploads/slides/GestureGAN_MM18.pptx) | [Poster](http://disi.unitn.it/~hao.tang/uploads/posters/GestureGAN_MM18.pdf)
 
