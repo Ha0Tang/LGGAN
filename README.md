@@ -37,8 +37,8 @@ The code is released for academic research use only. For commercial use, please 
 
 Clone this repo.
 ```bash
-git clone https://github.com/Ha0Tang/GestureGAN
-cd GestureGAN/
+git clone https://github.com/Ha0Tang/LocalGlobalGAN
+cd LocalGlobalGAN/
 ```
 
 This code requires PyTorch 0.4.1 and python 3.6+. Please install dependencies by
