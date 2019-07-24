@@ -70,17 +70,14 @@ Since there is no semantic maps for the aerial images on this dataset, we use bl
 
 **Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ia,Ig,Sa,Sg}, where Ia=aerial image, Ig=ground image, Sa=semantic map for aerial image and Sg=semantic map for ground image. Of course, you can use LGGAN for your own datasets and tasks.
 
-
-Of course, you can use GestureGAN for your own datasets and tasks, such landmark-guided facial experssion translation and keypoint-guided person image generation.
-
 ## Generating Images Using Pretrained Model
 
 Once the dataset is ready. The result images can be generated using pretrained models.
 
-1. You can download a pretrained model (e.g. ntu_gesturegan_twocycle) with the following script:
+1. You can download a pretrained model (e.g. sva) with the following script:
 
 ```
-bash ./scripts/download_gesturegan_model.sh ntu_gesturegan_twocycle
+bash ./scripts/download_lggan_model.sh sva
 ```
 The pretrained model is saved at `./checkpoints/[type]_pretrained`. Check [here](https://github.com/Ha0Tang/GestureGAN/blob/master/scripts/download_gesturegan_model.sh) for all the available GestureGAN models.
 
