@@ -51,33 +51,15 @@ or
 ./scripts/conda_deps.sh (for Conda users)
 ```
 
-To reproduce the results reported in the paper, you would need two NVIDIA GeForce GTX 1080 Ti GPUs or two NVIDIA TITAN Xp GPUs.
+To reproduce the results reported in the paper, you would need a NVIDIA GeForce GTX 1080 Ti GPUs.
 
 ## Dataset Preparation
 
-For hand gesture-to-gesture translation tasks, we use NTU Hand Digit and Creative Senz3D datasets.
-For cross-view image translation task, we use Dayton and CVUSA datasets.
-These datasets must be downloaded beforehand. Please download them on the respective webpages. In addition, we put a few sample images in this [code repo](https://github.com/Ha0Tang/GestureGAN/tree/master/datasets/samples). Please cite their papers if you use the data. 
+For SVA, Dayton or CVUSA, the datasets must be downloaded beforehand. Please download them on the respective webpages. In addition, we put a few sample images in this [code repo](https://github.com/Ha0Tang/LocalGlobalGAN/tree/master/datasets/samples). Please cite their papers if you use the data. 
 
-**Preparing NTU Hand Digit Dataset**. The dataset can be downloaded in this [paper](https://rose.ntu.edu.sg/Publications/Documents/Action%20Recognition/Robust%20Part-Based%20Hand%20Gesture.pdf). After downloading it we adopt [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) to generate hand skeletons and use them as training and testing data in our experiments. Note that we filter out failure cases in hand gesture estimation for training and testing. Please cite their papers if you use this dataset. Train/Test splits for Creative Senz3D dataset can be downloaded from [here](https://github.com/Ha0Tang/GestureGAN/tree/master/datasets/ntu_split). Download images and the crossponding extracted hand skeletons of this dataset:
-```bash
-bash ./datasets/download_gesturegan_dataset.sh ntu_image_skeleton
-```
-Then run the following MATLAB script to generate training and testing data:
-```bash
-cd datasets/
-matlab -nodesktop -nosplash -r "prepare_ntu_data"
-```
-
-**Preparing Creative Senz3D Dataset**. The dataset can be downloaded [here](https://lttm.dei.unipd.it//downloads/gesture/#senz3d). After downloading it we adopt [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) to generate hand skeletons and use them as training data in our experiments. Note that we filter out failure cases in hand gesture estimation for training and testing. Please cite their papers if you use this dataset. Train/Test splits for Creative Senz3D dataset can be downloaded from [here](https://github.com/Ha0Tang/GestureGAN/tree/master/datasets/senz3d_split). Download images and the crossponding extracted hand skeletons of this dataset:
-```bash
-bash ./datasets/download_gesturegan_dataset.sh senz3d_image_skeleton
-```
-Then run the following MATLAB script to generate training and testing data:
-```bash
-cd datasets/
-matlab -nodesktop -nosplash -r "prepare_senz3d_data"
-```
+**Preparing SVA Dataset**. The dataset can be downloaded [here](http://imagelab.ing.unimore.it/imagelab/page.asp?IdPage=19).
+Ground Truth semantic maps are not available for this datasets. We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
+Train/Test splits for Dayton dataset can be downloaded from [here](https://github.com/Ha0Tang/LocalGlobalGAN/tree/master/datasets/sva_split).
 
 **Preparing Dayton Dataset**. The dataset can be downloaded [here](https://github.com/lugiavn/gt-crossview). In particular, you will need to download dayton.zip. 
 Ground Truth semantic maps are not available for this datasets. We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
@@ -86,7 +68,9 @@ Train/Test splits for Dayton dataset can be downloaded from [here](https://githu
 **Preparing CVUSA Dataset**. The dataset can be downloaded [here](https://drive.google.com/drive/folders/0BzvmHzyo_zCAX3I4VG1mWnhmcGc), which is from the [page](http://cs.uky.edu/~jacobs/datasets/cvusa/). After unzipping the dataset, prepare the training and testing data as discussed in [SelectionGAN](https://arxiv.org/abs/1904.06807). We also convert semantic maps to the color ones by using this [script](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/convert_semantic_map_cvusa.m).
 Since there is no semantic maps for the aerial images on this dataset, we use black images as aerial semantic maps for placehold purposes.
 
-**Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ix,Iy,Cx,Cy}, where Ix=image x, Iy=image y, Cx=Controllable structure of image x, and Cy=Controllable structure of image y.
+**Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ia,Ig,Sa,Sg}, where Ia=aerial image, Ig=ground image, Sa=semantic map for aerial image and Sg=semantic map for ground image. Of course, you can use LGGAN for your own datasets.
+
+
 Of course, you can use GestureGAN for your own datasets and tasks, such landmark-guided facial experssion translation and keypoint-guided person image generation.
 
 ## Generating Images Using Pretrained Model
