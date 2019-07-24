@@ -52,7 +52,7 @@ or
 ./scripts/conda_deps.sh (for Conda users)
 ```
 
-To reproduce the results reported in the paper, you would need a NVIDIA GeForce GTX 1080 Ti GPUs.
+To reproduce the results reported in the paper, you would need a NVIDIA GeForce GTX 1080 Ti GPUs with 11 memory.
 
 ## Dataset Preparation
 
@@ -60,7 +60,7 @@ For SVA, Dayton or CVUSA, the datasets must be downloaded beforehand. Please dow
 
 **Preparing SVA Dataset**. The dataset can be downloaded [here](http://imagelab.ing.unimore.it/imagelab/page.asp?IdPage=19).
 Ground Truth semantic maps are not available for this datasets. We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
-Train/Test splits for Dayton dataset can be downloaded from [here](https://github.com/Ha0Tang/LocalGlobalGAN/tree/master/datasets/sva_split).
+Train/Test splits for SVA dataset can be downloaded from [here](https://github.com/Ha0Tang/LocalGlobalGAN/tree/master/datasets/sva_split).
 
 **Preparing Dayton Dataset**. The dataset can be downloaded [here](https://github.com/lugiavn/gt-crossview). In particular, you will need to download dayton.zip. 
 Ground Truth semantic maps are not available for this datasets. We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
