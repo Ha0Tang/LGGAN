@@ -213,16 +213,16 @@ We use several metrics to evaluate the quality of the generated images:
 ### Citation
 If you use this code for your research, please cite our papers.
 ```
-@inproceedings{tang2018gesturegan,
-  title={GestureGAN for Hand Gesture-to-Gesture Translation in the Wild},
-  author={Tang, Hao and Wang, Wei and Xu, Dan and Yan, Yan and Sebe, Nicu},
-  booktitle={ACM MM},
-  year={2018}
+@inproceedings{tang2019joint,
+  title={Joint Adversarial Learning Local Class-Specific and Global Image-Level Generation for Cross-View Image Translation},
+  author={Tang, Hao and Xu, Dan and Corso, Jason J. and Sebe, Nicu and Yan, Yan},
+  booktitle={arXiv},
+  year={2019}
 }
 ```
 
 ## Acknowledgments
-This source code is inspired by [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). We want to thank the NVIDIA Corporation for the donation of the TITAN Xp GPUs used in this work.
+This source code is inspired by [SelectionGAN](https://github.com/Ha0Tang/SelectionGAN).
 
 ## Related Projects
 
