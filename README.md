@@ -8,7 +8,7 @@ to generate the same scene but with different viewpoints.
 
 # Local and Global GAN (LGGAN) for Cross-View Image Translation
 
-## LocalGlobalGAN Framework
+## LGGAN Framework
 ![Framework](./imgs/LocalGlobalGAN_framework.jpg)
 
 ## Local Class-Specific Generator
