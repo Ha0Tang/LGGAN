@@ -9,7 +9,7 @@
 ## LGGAN Framework
 ![Framework](./imgs/LocalGlobalGAN_framework.jpg)
 
-## Local Class-Specific Generator
+## Local Class-Specific Generation
 <p align="center">
   <img src='./imgs/Local_Generator.jpg' align="middle" width=500/>
 </p>
