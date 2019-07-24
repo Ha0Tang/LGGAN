@@ -16,7 +16,7 @@ to generate the same scene but with different viewpoints.
   <img src='./imgs/Local_Generator.jpg' align="middle" width=500/>
 </p>
 
-### [Paper](https://arxiv.org/abs/1808) | [Project page](http://disi.unitn.it/~hao.tang/project/LocalGlobalGAN.html)
+### [Paper (Coming soon!)](https://arxiv.org/abs/1808) | [Project page](http://disi.unitn.it/~hao.tang/project/LocalGlobalGAN.html)
 
 GestureGAN for Hand Gesture-to-Gesture Translation in the Wild.<br>
 [Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>1</sup>, [Wei Wang](https://weiwangtrento.github.io/)<sup>1,2</sup>, [Dan Xu](http://www.robots.ox.ac.uk/~danxu/)<sup>1,3</sup>, [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/)<sup>4</sup> and [Nicu Sebe](http://disi.unitn.it/~sebe/)<sup>1</sup>. <br> 
