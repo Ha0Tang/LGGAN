@@ -14,7 +14,7 @@
   <img src='./imgs/Local_Generator.jpg' align="middle" width=500/>
 </p>
 
-### [Paper (Coming soon!)](https://arxiv.org/abs/1808) | [Project page](http://disi.unitn.it/~hao.tang/project/LocalGlobalGAN.html)
+### [Paper](https://arxiv.org/abs/1808) | [Project page](http://disi.unitn.it/~hao.tang/project/LocalGlobalGAN.html)
 
 Joint Adversarial Learning Local Class-Specific and Global Image-Level Generation for Cross-View Image Translation.<br>
 [Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>1</sup>, [Dan Xu](http://www.robots.ox.ac.uk/~danxu/)<sup>2</sup>, [Jason J. Corso](https://scholar.google.com/citations?user=g9bV-_sAAAAJ&hl=en)<sup>3</sup>, [Nicu Sebe](https://scholar.google.com/citations?user=stFCYOAAAAAJ&hl=en)<sup>1,4</sup> and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/)<sup>5</sup>. <br> 
@@ -80,7 +80,7 @@ Once the dataset is ready. The result images can be generated using pretrained m
 ```
 bash ./scripts/download_lggan_model.sh sva
 ```
-The pretrained model is saved at `./checkpoints/[type]_pretrained`. Check [here](https://github.com/Ha0Tang/LocalGlobalGAN/blob/master/scripts/download_lggan_model.sh) for all the available GestureGAN models.
+The pretrained model is saved at `./checkpoints/[type]_pretrained`. Check [here](https://github.com/Ha0Tang/LocalGlobalGAN/blob/master/scripts/download_lggan_model.sh) for all the available LGGAN models.
 
 2. Generate images using the pretrained model.
 ```bash
@@ -198,7 +198,7 @@ Use `--how_many` to specify the maximum number of images to generate. By default
 ## Code Structure
 
 - `train.py`, `test.py`: the entry point for training and testing.
-- `models/gesturegan_onecycle_model.py`, `models/gesturegan_twocycle_model.py`: creates the networks, and compute the losses.
+- `models/lggan_model.py`: creates the networks, and compute the losses.
 - `models/networks/`: defines the architecture of all models for gesturegan.
 - `options/`: creates option lists using `argparse` package.
 - `data/`: defines the class for loading images and controllable structures.
@@ -207,9 +207,11 @@ Use `--how_many` to specify the maximum number of images to generate. By default
 
 We use several metrics to evaluate the quality of the generated images:
 
-- Hand gesture-to-gesture translation: [Inception Score (IS)](https://github.com/openai/improved-gan) or [Here](https://github.com/Ha0Tang/GestureGAN/tree/master/scripts/evaluation/IS) **|** [Fréchet Inception Distance (FID)](https://github.com/bioinf-jku/TTUR) **|** [PSNR](https://github.com/Ha0Tang/GestureGAN/blob/master/scripts/evaluation/compute_psnr.lua), need install `Lua` **|** [Fréchet ResNet Distance (FRD)](https://github.com/Ha0Tang/GestureGAN/tree/master/scripts/evaluation/FRD), need install `MATLAB 2016+`
-- Cross-view image translation: [Inception Score (IS)](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_topK_KL.py), need install `python 2.7` **|** [Accuracy](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_accuracies.py), need install `python 2.7` **|** [KL score](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/KL_model_data.py), need install `python 2.7` **|** 
-[SSIM, PSNR, SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua` **|** [LPIPS](https://github.com/richzhang/PerceptualSimilarity)
+- [Inception Score (IS)](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_topK_KL.py), need install `python 2.7` 
+- [Accuracy](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_accuracies.py), need install `python 2.7` 
+- [KL score](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/KL_model_data.py), need install `python 2.7` 
+- [SSIM, PSNR, SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua` 
+- [LPIPS](https://github.com/richzhang/PerceptualSimilarity)
 
 ### Citation
 If you use this code for your research, please cite our papers.
