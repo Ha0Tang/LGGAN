@@ -2,9 +2,7 @@
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 [![Packagist](https://img.shields.io/badge/Pytorch-0.4.1-red.svg)]()
 
-![LocalGlobalGAN demo](https://github.com/Ha0Tang/GestureGAN/blob/master/imgs/demo_results.gif)
-GestureGAN for cross-view image tranlation task. Given an image and some novel semantic maps, GestureGAN is able
-to generate the same scene but with different viewpoints.
+![LocalGlobalGAN demo](https://github.com/Ha0Tang/GestureGAN/blob/master/imgs/dayton_results256++.jpg)
 
 # Local and Global GAN (LGGAN) for Cross-View Image Translation
 
@@ -23,6 +21,10 @@ Joint Adversarial Learning Local Class-Specific and Global Image-Level Generatio
 <sup>1</sup>University of Trento, Italy, <sup>2</sup>University of Oxford, UK, <sup>3</sup>University of Michigan, USA, <sup>4</sup>Huawei Technologies Ireland, Ireland, <sup>5</sup>Texas State University, USA.<br>
 In 2019.<br>
 The repository offers the implementation of our paper in PyTorch.
+
+![LocalGlobalGAN demo](https://github.com/Ha0Tang/GestureGAN/blob/master/imgs/demo_results.gif)
+GestureGAN for cross-view image tranlation task. Given an image and some novel semantic maps, GestureGAN is able
+to generate the same scene but with different viewpoints.
 
 ### [License](./LICENSE.md)
 
