@@ -12,7 +12,7 @@ to generate the same scene but with different viewpoints.
 ![Framework](./imgs/LocalGlobalGAN_framework.jpg)
 
 ## Local Class-Specific Generator
-<img src='./imgs/Local_Generator.jpg' align="middle" width=400>
+<img src='./imgs/Local_Generator.jpg' align="middle" width=420>
 
 ### [Conference paper](https://arxiv.org/abs/1808.04859) | [Project page (Conference paper)](http://disi.unitn.it/~hao.tang/project/GestureGAN.html) | [Slides](http://disi.unitn.it/~hao.tang/uploads/slides/GestureGAN_MM18.pptx) | [Poster](http://disi.unitn.it/~hao.tang/uploads/posters/GestureGAN_MM18.pdf)
 
