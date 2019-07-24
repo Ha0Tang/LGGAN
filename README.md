@@ -101,88 +101,61 @@ New models can be trained with the following commands.
 
 1. Prepare dataset. 
 
-2. Train.
+2. Training & Testing
 
 For SVA dataset:
 ```bash
-export CUDA_VISIBLE_DEVICES=3,4;
-python train.py --dataroot ./datasets/ntu --name ntu_gesturegan_twocycle --model gesturegan_twocycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0,1 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --lambda_L1 800 --cyc_L1 0.1 --lambda_identity 0.01 --lambda_feat 1000 --display_id 0 --niter 10 --niter_decay 10;
+export CUDA_VISIBLE_DEVICES=0;
+python train.py --dataroot ./datasets/sva_local_global --name sva_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip  --niter 10 --niter_decay 10  --display_id 0;
+python test.py --dataroot ./datasets/sva_local_global --name sva_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval;
 ```
 
 For CVUSA dataset:
 ```bash
-export CUDA_VISIBLE_DEVICES=0;
-python train.py --dataroot ./dataset/cvusa --name cvusa_gesturegan_onecycle --model gesturegan_onecycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --cyc_L1 0.1 --lambda_identity 100 --lambda_feat 100 --display_id 0 --niter 15 --niter_decay 15;
+export CUDA_VISIBLE_DEVICES=1;
+python train.py --dataroot ./dataset/cvusa_local_global --name cvusa_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --niter 15 --niter_decay 15 --display_id 0;
+python test.py --dataroot ./dataset/cvusa_local_global --name cvusa_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval;
 ```
 
 For Dayton (a2g direction, 256) dataset:
 ```bash
-export CUDA_VISIBLE_DEVICES=0;
-python train.py --dataroot ./datasets/dayton_a2g --name dayton_a2g_gesturegan_onecycle --model gesturegan_onecycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --cyc_L1 0.1 --lambda_identity 100 --lambda_feat 100 --display_id 0 --niter 20 --niter_decay 15;
+export CUDA_VISIBLE_DEVICES=6;
+python train.py --dataroot ./datasets/dayton_a2g_local_global --name dayton_a2g_lggan --model lggan  --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --display_id 0 --niter 20 --niter_decay 15;
+python test.py --dataroot ./datasets/dayton_a2g_local_global --name dayton_a2g_lggan --model lggan  --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval;
 ```
 
 For Dayton (g2a direction, 256) dataset:
 ```bash
-export CUDA_VISIBLE_DEVICES=1;
-python train.py --dataroot ./datasets/dayton_g2a --name dayton_g2a_gesturegan_onecycle --model gesturegan_onecycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --cyc_L1 0.1 --lambda_identity 100 --lambda_feat 100 --display_id 0 --niter 20 --niter_decay 15;
+export CUDA_VISIBLE_DEVICES=5;
+python train.py --dataroot ./datasets/dayton_g2a_local_global --name dayton_g2a_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --display_id 0 --niter 20 --niter_decay 15;
+python test.py --dataroot ./datasets/dayton_g2a_local_global --name dayton_g2a_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval;
 ```
 
 For Dayton (a2g direction, 64) dataset:
 ```bash
-export CUDA_VISIBLE_DEVICES=0;
-python train.py --dataroot ./datasets/dayton_a2g --name dayton_a2g_64_gesturegan_onecycle --model gesturegan_onecycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --cyc_L1 0.1 --lambda_identity 100 --lambda_feat 100 --display_id 0 --niter 50 --niter_decay 50;
+export CUDA_VISIBLE_DEVICES=7;
+python train.py --dataroot ./datasets/dayton_a2g_local_global --name dayton_a2g_64_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --display_id 0 --niter 50 --niter_decay 50;
+python test.py --dataroot ./datasets/dayton_a2g_local_global --name dayton_a2g_64_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --eval;
 ```
 
 For Dayton (g2a direction, 64) dataset:
 ```bash
-export CUDA_VISIBLE_DEVICES=1;
-python train.py --dataroot ./datasets/dayton_g2a --name dayton_g2a_64_gesturegan_onecycle --model gesturegan_onecycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --cyc_L1 0.1 --lambda_identity 100 --lambda_feat 100 --display_id 0 --niter 50 --niter_decay 50;
+export CUDA_VISIBLE_DEVICES=7;
+python train.py --dataroot ./datasets/dayton_g2a_local_global --name dayton_g2a_64_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --display_id 0 --niter 50 --niter_decay 50;
+python test.py --dataroot ./datasets/dayton_g2a_local_global --name dayton_g2a_64_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --eval;
 ```
 
-There are many options you can specify. Please use `python train.py --help`. The specified options are printed to the console. To specify the number of GPUs to utilize, use `export CUDA_VISIBLE_DEVICES=[GPU_ID]`. Note that train `gesturegan_onecycle` only needs one GPU, while train `gesturegan_twocycle` needs two GPUs.
+### Training & Testing Tips
+
+When training, there are many options you can specify. Please use `python train.py --help`. The specified options are printed to the console. To specify the number of GPUs to utilize, use `export CUDA_VISIBLE_DEVICES=[GPU_ID]`.
 
 To view training results and loss plots on local computers, set `--display_id` to a non-zero value and run `python -m visdom.server` on a new terminal and click the URL [http://localhost:8097](http://localhost:8097/).
 On a remote server, replace `localhost` with your server's name, such as [http://server.trento.cs.edu:8097](http://server.trento.cs.edu:8097).
 
+When testing, use `--how_many` to specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
+
 ### Can I continue/resume my training? 
 To fine-tune a pre-trained model, or resume the previous training, use the `--continue_train --which_epoch <int> --epoch_count<int+1>` flag. The program will then load the model based on epoch `<int>` you set in `--which_epoch <int>`. Set `--epoch_count <int+1>` to specify a different starting epoch count.
-
-
-## Testing
-
-Testing is similar to testing pretrained models.
-
-For SVA dataset:
-```bash
-python test.py --dataroot ./datasets/ntu --name ntu_gesturegan_twocycle --model gesturegan_twocycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip;
-```
-
-For CVUSA dataset:
-```bash
-python test.py --dataroot ./datasets/cvusa --name cvusa_gesturegan_onecycle --model gesturegan_onecycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip;
-```
-
-For Dayton (a2g direction, 256) dataset:
-```bash
-python test.py --dataroot ./datasets/dayton_a2g --name dayton_a2g_gesturegan_onecycle --model gesturegan_onecycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip;
-```
-
-For Dayton (g2a direction, 256) dataset:
-```bash
-python test.py --dataroot ./datasets/dayton_g2a --name dayton_g2a_gesturegan_onecycle  --model gesturegan_onecycle  --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip;
-```
-
-For Dayton (a2g direction, 64) dataset:
-```bash
-python test.py --dataroot ./datasets/dayton_a2g --name dayton_g2a_64_gesturegan_onecycle --model gesturegan_onecycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip;
-```
-
-For Dayton (g2a direction, 64) dataset:
-```bash
-python test.py --dataroot ./datasets/dayton_g2a --name dayton_g2a_64_gesturegan_onecycle --model gesturegan_onecycle --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip;
-```
-
-Use `--how_many` to specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
 
 ## Code Structure
 
