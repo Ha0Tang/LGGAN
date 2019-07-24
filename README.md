@@ -2,7 +2,7 @@
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 [![Packagist](https://img.shields.io/badge/Pytorch-0.4.1-red.svg)]()
 
-![LocalGlobalGAN demo](https://github.com/Ha0Tang/GestureGAN/blob/master/imgs/dayton_results256++.jpg)
+![LocalGlobalGAN demo](https://github.com/Ha0Tang/LocalGlobalGAN/tree/master/imgs/dayton_results.jpg)
 
 # Local and Global GAN (LGGAN) for Cross-View Image Translation
 
