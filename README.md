@@ -84,7 +84,19 @@ The pretrained model is saved at `./checkpoints/[type]_pretrained`. Check [here]
 
 2. Generate images using the pretrained model.
 ```bash
-python test.py --dataroot [path_to_dataset] --name [type]_pretrained --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm batch --gpu_ids 0 --batchSize [BS] --loadSize [LS] --fineSize [FS] --no_flip --eval;
+python test.py --dataroot [path_to_dataset] \
+	--name [type]_pretrained \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm batch \
+	--gpu_ids 0 \
+	--batchSize [BS] \
+	--loadSize [LS] \
+	--fineSize [FS] \
+	--no_flip \
+	--eval
 ```
 
 `[path_to_dataset]` is the path to the dataset. Dataset can be one of `sva`, `dayton_a2g`, `dayton_g2a` and `cvusa`. `[type]_pretrained` is the directory name of the checkpoint file downloaded in Step 1, which should be one of `sva_pretrained`, `dayton_a2g_64_pretrained`, `dayton_g2a_64_pretrained`, `dayton_a2g_pretrained`, `dayton_g2a_pretrained` and `cvusa_pretrained`. 
@@ -105,43 +117,205 @@ New models can be trained and tested with the following commands.
 For SVA dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=0;
-python train.py --dataroot ./datasets/sva_local_global --name sva_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip  --niter 10 --niter_decay 10  --display_id 0;
-python test.py --dataroot ./datasets/sva_local_global --name sva_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval;
+python train.py --dataroot ./datasets/sva_local_global 
+	--name sva_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 4 \
+	--loadSize 286 \
+	--fineSize 256 \
+	--no_flip \
+	--niter 10 \
+	--niter_decay 10 \
+	--display_id 0
+
+python test.py --dataroot ./datasets/sva_local_global \
+	--name sva_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 4 \
+	--loadSize 286 \
+	--fineSize 256 \
+	--no_flip \
+	--eval
 ```
 
 For CVUSA dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=1;
-python train.py --dataroot ./dataset/cvusa_local_global --name cvusa_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --niter 15 --niter_decay 15 --display_id 0;
-python test.py --dataroot ./dataset/cvusa_local_global --name cvusa_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval;
+python train.py --dataroot ./dataset/cvusa_local_global \
+	--name cvusa_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 4 \
+	--loadSize 286 \
+	--fineSize 256 \
+	--no_flip \
+	--niter 15 \
+	--niter_decay 15 \
+	--display_id 0
+
+python test.py --dataroot ./dataset/cvusa_local_global \
+	--name cvusa_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 4 \
+	--loadSize 286 \
+	--fineSize 256 \
+	--no_flip \
+	--eval
 ```
 
 For Dayton (a2g direction, 256) dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=6;
-python train.py --dataroot ./datasets/dayton_a2g_local_global --name dayton_a2g_lggan --model lggan  --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --display_id 0 --niter 20 --niter_decay 15;
-python test.py --dataroot ./datasets/dayton_a2g_local_global --name dayton_a2g_lggan --model lggan  --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval;
+python train.py --dataroot ./datasets/dayton_a2g_local_global \
+	--name dayton_a2g_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 4 \
+	--loadSize 286 \
+	--fineSize 256 \
+	--no_flip \
+	--display_id 0 \
+	--niter 20 \
+	--niter_decay 15
+
+python test.py --dataroot ./datasets/dayton_a2g_local_global \
+	--name dayton_a2g_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 4 \
+	--loadSize 286 \
+	--fineSize 256 \
+	--no_flip \
+	--eval
 ```
 
 For Dayton (g2a direction, 256) dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=5;
-python train.py --dataroot ./datasets/dayton_g2a_local_global --name dayton_g2a_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --display_id 0 --niter 20 --niter_decay 15;
-python test.py --dataroot ./datasets/dayton_g2a_local_global --name dayton_g2a_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 4 --loadSize 286 --fineSize 256 --no_flip --eval;
+python train.py --dataroot ./datasets/dayton_g2a_local_global \
+	--name dayton_g2a_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 4 \
+	--loadSize 286 \
+	--fineSize 256 \
+	--no_flip \
+	--display_id 0 \
+	--niter 20 \
+	--niter_decay 15
+
+python test.py --dataroot ./datasets/dayton_g2a_local_global \
+	--name dayton_g2a_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 4 \
+	--loadSize 286 \
+	--fineSize 256 \
+	--no_flip \
+	--eval
 ```
 
 For Dayton (a2g direction, 64) dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=7;
-python train.py --dataroot ./datasets/dayton_a2g_local_global --name dayton_a2g_64_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --display_id 0 --niter 50 --niter_decay 50;
-python test.py --dataroot ./datasets/dayton_a2g_local_global --name dayton_a2g_64_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --eval;
+python train.py --dataroot ./datasets/dayton_a2g_local_global \
+	--name dayton_a2g_64_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 16 \
+	--loadSize 72 \
+	--fineSize 64 \
+	--no_flip \
+	--display_id 0 \
+	--niter 50 \
+	--niter_decay 50
+
+python test.py --dataroot ./datasets/dayton_a2g_local_global \
+	--name dayton_a2g_64_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 16 \
+	--loadSize 72 \
+	--fineSize 64 \
+	--no_flip \
+	--eval
 ```
 
 For Dayton (g2a direction, 64) dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=7;
-python train.py --dataroot ./datasets/dayton_g2a_local_global --name dayton_g2a_64_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --display_id 0 --niter 50 --niter_decay 50;
-python test.py --dataroot ./datasets/dayton_g2a_local_global --name dayton_g2a_64_lggan --model lggan --which_model_netG resnet_9blocks --which_direction AtoB --dataset_mode aligned --norm instance --gpu_ids 0 --batchSize 16 --loadSize 72 --fineSize 64 --no_flip --eval;
+python train.py --dataroot ./datasets/dayton_g2a_local_global \
+	--name dayton_g2a_64_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 16 \
+	--loadSize 72 \
+	--fineSize 64 \
+	--no_flip \
+	--display_id 0 \
+	--niter 50 \
+	--niter_decay 50
+
+python test.py --dataroot ./datasets/dayton_g2a_local_global \
+	--name dayton_g2a_64_lggan \
+	--model lggan \
+	--which_model_netG resnet_9blocks \
+	--which_direction AtoB \
+	--dataset_mode aligned \
+	--norm instance \
+	--gpu_ids 0 \
+	--batchSize 16 \
+	--loadSize 72 \
+	--fineSize 64 \
+	--no_flip \
+	--eval
 ```
 
 ### Training & Testing Tips
@@ -184,7 +358,7 @@ If you use this code for your research, please cite our papers:
   year={2019}
 }
 ```
-If you use modules from SelectionGAN paper, please use the following:
+If you use modules from SelectionGAN paper, please also cite their paper:
 ```
 @inproceedings{tang2019multichannel,
   title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation},
