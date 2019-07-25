@@ -5,6 +5,7 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-blue.svg)]((https://github.com/Ha0Tang/LocalGlobalGAN/graphs/commit-activity))
 ![Contributing](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
 ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
+[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Ha0Tang/LocalGlobalGAN/issues/)
 
 ![LocalGlobalGAN demo](./imgs/dayton_results.jpg)
 
