@@ -175,12 +175,21 @@ We use several metrics to evaluate the quality of the generated images:
 - [LPIPS](https://github.com/richzhang/PerceptualSimilarity)
 
 ### Citation
-If you use this code for your research, please cite our papers.
+If you use this code for your research, please cite our papers:
 ```
 @inproceedings{tang2019joint,
   title={Joint Adversarial Learning Local Class-Specific and Global Image-Level Generation for Cross-View Image Translation},
   author={Tang, Hao and Xu, Dan and Corso, Jason J. and Sebe, Nicu and Yan, Yan},
   booktitle={arXiv},
+  year={2019}
+}
+```
+If you use modules from SelectionGAN paper, please use the following:
+```
+@inproceedings{tang2019multichannel,
+  title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation},
+  author={Tang, Hao and Xu, Dan and Sebe, Nicu and Wang, Yanzhi and Corso, Jason J. and Yan, Yan},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2019}
 }
 ```
