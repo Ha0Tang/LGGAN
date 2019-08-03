@@ -25,7 +25,7 @@ Joint Adversarial Learning Local Class-Specific and Global Image-Level Generatio
 [Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>1</sup>, [Dan Xu](http://www.robots.ox.ac.uk/~danxu/)<sup>2</sup>, [Jason J. Corso](https://scholar.google.com/citations?user=g9bV-_sAAAAJ&hl=en)<sup>3</sup>, [Nicu Sebe](https://scholar.google.com/citations?user=stFCYOAAAAAJ&hl=en)<sup>1,4</sup> and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/)<sup>5</sup>. <br> 
 <sup>1</sup>University of Trento, Italy, <sup>2</sup>University of Oxford, UK, <sup>3</sup>University of Michigan, USA, <sup>4</sup>Huawei Technologies Ireland, Ireland, <sup>5</sup>Texas State University, USA.<br>
 In 2019.<br>
-The repository offers the implementation of our paper in PyTorch.
+The repository offers the official implementation of our paper in PyTorch.
 
 ![LocalGlobalGAN demo](https://github.com/Ha0Tang/GestureGAN/blob/master/imgs/demo_results.gif)
 LGGAN for arbitrary cross-view image tranlation task. Given an image and some novel semantic maps, LGGAN is able to generate the same scene but with different viewpoints from both local and global levels.
