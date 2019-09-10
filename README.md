@@ -351,6 +351,8 @@ We use several metrics to evaluate the quality of the generated images:
 - [KL score](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/KL_model_data.py), need install `python 2.7` 
 - [SSIM, PSNR, SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua` 
 - [LPIPS](https://github.com/richzhang/PerceptualSimilarity)
+- [FID](https://github.com/mseitzer/pytorch-fid): suggested by [SPADE](https://github.com/NVlabs/SPADE)
+- [mIOU on Cityscapes](https://github.com/fyu/drn)
 
 ### Citation
 If you use this code for your research, please cite our papers:
