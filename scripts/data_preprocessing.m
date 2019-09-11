@@ -17,8 +17,13 @@ clear all;close all;clc
 image_folder='/PATH/LocalGlobalGAN/datasets/others/sva/test';
 save_folder='/PATH/LocalGlobalGAN/datasets/samples/sva/test';
 
+<<<<<<< HEAD
 % image_folder='/PATH/LocalGlobalGAN/datasets/others/sva/train';
 % save_folder='/PATH/LocalGlobalGAN/datasets/samples/sva/train';
+=======
+image_folder='/PATH/LocalGlobalGAN/datasets/others/sva/train';
+save_folder='/PATH/LocalGlobalGAN/datasets/samples/sva/train';
+>>>>>>> 95a0fe09fafece08bd8c0ad02d6deb1401b1a827
 
 if ~isfolder(save_folder)
     mkdir(save_folder)
