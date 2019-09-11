@@ -71,9 +71,14 @@ Train/Test splits for SVA dataset can be downloaded from [here](https://github.c
 Ground Truth semantic maps are not available for this datasets. We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
 Train/Test splits for Dayton dataset can be downloaded from [here](https://github.com/Ha0Tang/SelectionGAN/tree/master/datasets/dayton_split).
 
-**Preparing CVUSA Dataset**. The dataset can be downloaded [here](https://drive.google.com/drive/folders/0BzvmHzyo_zCAX3I4VG1mWnhmcGc), which is from the [page](http://cs.uky.edu/~jacobs/datasets/cvusa/). After unzipping the dataset, prepare the training and testing data as discussed in [SelectionGAN](https://arxiv.org/abs/1904.06807). We also adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
+**Preparing CVUSA Dataset**. The dataset can be downloaded [here](https://drive.google.com/drive/folders/0BzvmHzyo_zCAX3I4VG1mWnhmcGc), which is from the [page](http://cs.uky.edu/~jacobs/datasets/cvusa/). After unzipping the dataset, prepare the training and testing data as discussed in [SelectionGAN](https://arxiv.org/abs/1904.06807). We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
 
-**Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ia,Ig,Sa,Sg}, where Ia=aerial image, Ig=ground image, Sa=semantic map for aerial image and Sg=semantic map for ground image. Of course, you can use LGGAN for your own datasets and tasks.
+**Dataset Pre-processing**. After downloading the dataset, prepare the data like [here](https://github.com/Ha0Tang/LocalGlobalGAN/tree/master/datasets/others/sva), then run the following script to generate the data like [here](https://github.com/Ha0Tang/LocalGlobalGAN/tree/master/datasets/samples) for training and testing:
+```
+matlab -nodesktop -nosplash -r "data_preprocessing"
+```
+
+**Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ia,Ig,Sa,Sg,la,lg}, where Ia=aerial image, Ig=ground image, Sa=color semantic map for aerial image, Sg=color semantic map for ground image, Sa=semantic label for aerial image, Sg=semantic label for ground image. Of course, you can use LGGAN for your own datasets and tasks.
 
 ## Generating Images Using Pretrained Model
 
