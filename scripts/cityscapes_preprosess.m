@@ -27,13 +27,13 @@
 % class information can be found https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py
 
 clear all;close all;clc
-% image_folder='/home/htang/projects/LocalGlobalGAN/dataset/Cityscapes/leftImg8bit/val';
-% segmeantaion_folder = '/home/htang/projects/LocalGlobalGAN/dataset/Cityscapes/gtFine/val';
-% save_folder='/home/htang/projects/LocalGlobalGAN/dataset/Cityscapes_for_training/val';
+% image_folder='/home/htang/projects/LocalGlobalGAN/datasets/Cityscapes/leftImg8bit/val';
+% segmeantaion_folder = '/home/htang/projects/LocalGlobalGAN/datasets/Cityscapes/gtFine/val';
+% save_folder='/home/htang/projects/LocalGlobalGAN/datasets/Cityscapes_for_training/val';
 
-image_folder='/home/htang/projects/LocalGlobalGAN/dataset/Cityscapes/leftImg8bit/train';
-segmeantaion_folder = '/home/htang/projects/LocalGlobalGAN/dataset/Cityscapes/gtFine/train';
-save_folder='/home/htang/projects/LocalGlobalGAN/dataset/Cityscapes_for_training/train';
+image_folder='/home/htang/projects/LocalGlobalGAN/datasets/Cityscapes/leftImg8bit/train';
+segmeantaion_folder = '/home/htang/projects/LocalGlobalGAN/datasets/Cityscapes/gtFine/train';
+save_folder='/home/htang/projects/LocalGlobalGAN/datasets/Cityscapes_for_training/train';
 if ~isfolder(save_folder)
     mkdir(save_folder)
 end
