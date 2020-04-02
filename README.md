@@ -8,6 +8,11 @@
 <img src='./imgs/framework.jpg' width=1200>
 
 ## Results
+
+<img src='./imgs/semantic_results.jpg' width=1200>
+
+<br>
+
 <img src='./imgs/seg_city.jpg' width=1200>
 
 <br>
