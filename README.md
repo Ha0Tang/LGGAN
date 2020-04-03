@@ -19,4 +19,7 @@
 
 <img src='./imgs/seg_ade20k.jpg' width=1200>
 
+## Related Projects
+**[SelectionGAN](https://github.com/Ha0Tang/SelectionGAN) | [EdgeGAN](https://github.com/Ha0Tang/EdgeGAN)**
+
 ## Code coming soon!
