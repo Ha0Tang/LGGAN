@@ -22,4 +22,35 @@
 ## Related Projects
 **[SelectionGAN](https://github.com/Ha0Tang/SelectionGAN) | [EdgeGAN](https://github.com/Ha0Tang/EdgeGAN)**
 
+## Citation
+```
+@article{tang2020edge,
+  title={Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis},
+  author={Tang, Hao and Qi, Xiaojuan and Xu, Dan and Torr, Philip HS and Sebe, Nicu},
+  journal={arXiv preprint arXiv:2003.13898},
+  year={2020}
+}
+
+@inproceedings{tang2019local,
+  title={Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation},
+  author={Tang, Hao and Xu, Dan and Yan, Yan and Torr, Philip HS and Sebe, Nicu},
+  booktitle={CVPR},
+  year={2020}
+}
+
+@inproceedings{tang2019multi,
+  title={Multi-channel attention selection gan with cascaded semantic guidance for cross-view image translation},
+  author={Tang, Hao and Xu, Dan and Sebe, Nicu and Wang, Yanzhi and Corso, Jason J and Yan, Yan},
+  booktitle={CVPR},
+  year={2019}
+}
+
+@article{tang2020multi,
+  title={Multi-channel attention selection gans for guided image-to-image translation},
+  author={Tang, Hao and Xu, Dan and Yan, Yan and Corso, Jason J and Torr, Philip HS and Sebe, Nicu},
+  journal={arXiv preprint arXiv:2002.01048},
+  year={2020}
+}
+```
+
 ## Code coming soon!
