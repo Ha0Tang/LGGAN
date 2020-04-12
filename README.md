@@ -53,4 +53,4 @@
 }
 ```
 
-## Code coming soon!
+## We will release the code and pre-trained models soon. Make sure to star our repository to stay tuned.
