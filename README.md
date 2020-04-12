@@ -23,6 +23,7 @@
 **[SelectionGAN](https://github.com/Ha0Tang/SelectionGAN) | [EdgeGAN](https://github.com/Ha0Tang/EdgeGAN) | [Guided-I2I-Translation-Papers](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)**
 
 ## Citation
+If you use this code for your research, please cite our papers.
 ```
 @article{tang2020edge,
   title={Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis},
