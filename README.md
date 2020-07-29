@@ -24,6 +24,8 @@
 
 ## Citation
 If you use this code for your research, please cite our papers.
+
+EdgeGAN
 ```
 @article{tang2020edge,
   title={Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis},
@@ -31,14 +33,20 @@ If you use this code for your research, please cite our papers.
   journal={arXiv preprint arXiv:2003.13898},
   year={2020}
 }
+```
 
+LGGAN
+```
 @inproceedings{tang2019local,
   title={Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation},
   author={Tang, Hao and Xu, Dan and Yan, Yan and Torr, Philip HS and Sebe, Nicu},
   booktitle={CVPR},
   year={2020}
 }
+```
 
+SelectionGAN
+```
 @inproceedings{tang2019multi,
   title={Multi-channel attention selection gan with cascaded semantic guidance for cross-view image translation},
   author={Tang, Hao and Xu, Dan and Sebe, Nicu and Wang, Yanzhi and Corso, Jason J and Yan, Yan},
