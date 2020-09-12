@@ -20,10 +20,20 @@
 <img src='./imgs/seg_ade20k.jpg' width=1200>
 
 ## Related Projects
-**[SelectionGAN](https://github.com/Ha0Tang/SelectionGAN) | [EdgeGAN](https://github.com/Ha0Tang/EdgeGAN) | [PanoGAN](https://github.com/sswuai/PanoGAN) | [Guided-I2I-Translation-Papers](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)**
+**[SelectionGAN](https://github.com/Ha0Tang/SelectionGAN) | [EdgeGAN](https://github.com/Ha0Tang/EdgeGAN) | [DAGAN](https://github.com/Ha0Tang/DAGAN) | [PanoGAN](https://github.com/sswuai/PanoGAN) | [Guided-I2I-Translation-Papers](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)**
 
 ## Citation
 If you use this code for your research, please cite our papers.
+
+LGGAN
+```
+@inproceedings{tang2019local,
+  title={Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation},
+  author={Tang, Hao and Xu, Dan and Yan, Yan and Torr, Philip HS and Sebe, Nicu},
+  booktitle={CVPR},
+  year={2020}
+}
+```
 
 EdgeGAN
 ```
@@ -35,12 +45,12 @@ EdgeGAN
 }
 ```
 
-LGGAN
+DAGAN
 ```
-@inproceedings{tang2019local,
-  title={Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation},
-  author={Tang, Hao and Xu, Dan and Yan, Yan and Torr, Philip HS and Sebe, Nicu},
-  booktitle={CVPR},
+@ inproceedings{tang2020dual,
+  title={Dual Attention GANs for Semantic Image Synthesis},
+  author={Tang, Hao and Bai, Song and Sebe, Nicu},
+  booktitle ={ACM MM},
   year={2020}
 }
 ```
