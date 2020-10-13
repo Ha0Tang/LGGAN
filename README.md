@@ -47,7 +47,7 @@ EdgeGAN
 
 DAGAN
 ```
-@ inproceedings{tang2020dual,
+@inproceedings{tang2020dual,
   title={Dual Attention GANs for Semantic Image Synthesis},
   author={Tang, Hao and Bai, Song and Sebe, Nicu},
   booktitle ={ACM MM},
