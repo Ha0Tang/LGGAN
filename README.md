@@ -29,7 +29,7 @@ Also see our ACM MM 2020 paper [Dual Attention GANs for Semantic Image Synthesis
 
 ### Cross-View Image Translation Results on Dayton and CVUSA
 
-<img src='./imgs/cross_view_results.jpg' width=1200>
+<img src='./imgs/cross_view_results.jpg' width=800>
 
 ### Semantic Image Synthesis Results on Cityscapes and ADE20K
 
