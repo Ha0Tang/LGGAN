@@ -15,7 +15,7 @@
 Clone this repo.
 ```bash
 git clone https://github.com/Ha0Tang/LGGAN
-cd DAGAN/
+cd LGGAN/
 ```
 
 This code requires PyTorch 1.0 and python 3+. Please install dependencies by
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 This code also requires the Synchronized-BatchNorm-PyTorch rep.
 ```
-cd cd semantic_image_synthesis/
+cd semantic_image_synthesis/
 cd models/networks/
 git clone https://github.com/vacancy/Synchronized-BatchNorm-PyTorch
 cp -rf Synchronized-BatchNorm-PyTorch/sync_batchnorm .
@@ -35,9 +35,7 @@ cd ../../
 To reproduce the results reported in the paper, you would need an NVIDIA DGX1 machine with 8 V100 GPUs.
 
 ## Dataset Preparation
-Please follow our [DAGAN](https://github.com/Ha0Tang/DAGAN#dataset-preparation) to directly download both Cityscapes and ADE20K datasets.
-
-This repository use the same dataset format as [DAGAN](https://github.com/Ha0Tang/DAGAN), [EdgeGAN](https://github.com/Ha0Tang/EdgeGAN) and [SelectionGAN](https://github.com/Ha0Tang/SelectionGAN/tree/master/semantic_synthesis). so you can use the same data for all these methods.
+Please follow our [DAGAN](https://github.com/Ha0Tang/DAGAN#dataset-preparation) to directly download both Cityscapes and ADE20K datasets. This repository use the same dataset format as [DAGAN](https://github.com/Ha0Tang/DAGAN), [EdgeGAN](https://github.com/Ha0Tang/EdgeGAN) and [SelectionGAN](https://github.com/Ha0Tang/SelectionGAN/tree/master/semantic_synthesis). so you can use the same data for all these methods.
 
 ## Generating Images Using Pretrained Model
 1. Download the pretrained models using the following script,
