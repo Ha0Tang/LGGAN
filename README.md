@@ -8,11 +8,6 @@
 
 ## Contents
   - [Local and Global GAN](#Local-and-Global-GAN)
-  - [Installation](#Installation)
-  - [Dataset Preparation](#Dataset-Preparation)
-  - [Generating Images Using Pretrained Model](#Generating-Images-Using-Pretrained-Model)
-  - [Train and Test New Models](#Train-and-Test-New-Models)
-  - [Evaluation](#Evaluation)
   - [Acknowledgments](#Acknowledgments)
   - [Related Projects](#Related-Projects)
   - [Citation](#Citation)
