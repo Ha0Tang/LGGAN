@@ -1,0 +1,2 @@
+python train.py --name LGGAN_ade20k --dataset_mode ade20k --dataroot ./datasets/ade20k --niter 100 --niter_decay 100 --gpu_ids 0,1,2,3,4,5,6,7 --checkpoints_dir ./checkpoints --batchSize 24 --save_epoch_freq 5 --no_l1_loss 
+# --continue_train;
