@@ -11,11 +11,24 @@ from models.networks.normalization import get_nonspade_norm_layer
 from models.networks.architecture import ResnetBlock as ResnetBlock
 from models.networks.architecture import SPADEResnetBlock as SPADEResnetBlock
 
+#def if_all_zero(tensor):
+#    if torch.sum(tensor) == 0:
+#        return 0
+#    else:
+#        return 1
+
 def if_all_zero(tensor):
-    if torch.sum(tensor) == 0:
-        return 0
-    else:
-        return 1
+    b, _, _, _ = tensor.size()
+    # print('b', b)
+    index = torch.Tensor(b).fill_(1)
+    # print('index size', index.size())
+    # print('before index', index)
+    for i in range(b):
+        # print('i', i)
+        if torch.sum(tensor[i:i+1, :, :, :]) == 0:
+            index[i:i+1] = 0
+    # print('after index', index)
+    return index
 
 class LGGANGenerator(BaseNetwork):
     @staticmethod
@@ -156,7 +169,7 @@ class LGGANGenerator(BaseNetwork):
 
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
         # self.fc1 = nn.Linear(64*256 * 512, 512)
-        self.fc2 = nn.Linear(64, 52)
+        self.fc2 = nn.Linear(64, 51)
 
         self.deconv3_attention = nn.ConvTranspose2d(256, 128, 3, 2, 1, 1)
         self.deconv3_norm_attention = nn.InstanceNorm2d(128)
@@ -318,11 +331,11 @@ class LGGANGenerator(BaseNetwork):
 
         # print('after feature:', feature_0.size())
         # [1, 64, 256, 512]
-        feature_combine= torch.cat((feature_0, feature_1, feature_2, feature_3, feature_4, feature_5, feature_6, feature_7, feature_8, feature_9, feature_10, feature_11,
+        feature_combine= torch.cat((feature_0,feature_1, feature_2, feature_3, feature_4, feature_5, feature_6, feature_7, feature_8, feature_9, feature_10, feature_11,
                                     feature_12, feature_13, feature_14, feature_15, feature_16, feature_17, feature_18, feature_19,feature_20,feature_21,
                                     feature_22,feature_23, feature_24, feature_25, feature_26,feature_27,feature_28,feature_29,feature_30,feature_31,
                                     feature_32,feature_33,feature_34, feature_35, feature_36, feature_37, feature_38, feature_39, feature_40, feature_41,
-                                    feature_42, feature_43, feature_44, feature_45, feature_46, feature_47, feature_48, feature_49, feature_50, feature_51), 0)
+                                    feature_42, feature_43, feature_44, feature_45, feature_46, feature_47, feature_48, feature_49, feature_50), 0)
         # print(feature_combine.size())
         # [52, 64, 256, 256]
         feature_combine = self.avgpool(feature_combine)
@@ -333,11 +346,73 @@ class LGGANGenerator(BaseNetwork):
         # [52, 64]
         feature_score = self.fc2(feature_combine_fc)
         # print(feature_score.size()) [35, 35]
-        target= torch.tensor([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,
-                              34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51])
+        #target= torch.tensor([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,
+         #                     34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49])
         # print(target)
+        b, _, _, _ = feature_34.size()
+        # print(feature_score.size()) [35, 35]
+        target_label_0 = torch.Tensor(b).fill_(0)
+        target_label_1 = torch.Tensor(b).fill_(1)
+        target_label_2 = torch.Tensor(b).fill_(2)
+        target_label_3 = torch.Tensor(b).fill_(3)
+        target_label_4 = torch.Tensor(b).fill_(4)
+        target_label_5 = torch.Tensor(b).fill_(5)
+        target_label_6 = torch.Tensor(b).fill_(6)
+        target_label_7 = torch.Tensor(b).fill_(7)
+        target_label_8 = torch.Tensor(b).fill_(8)
+        target_label_9 = torch.Tensor(b).fill_(9)
+        target_label_10 = torch.Tensor(b).fill_(10)
+        target_label_11 = torch.Tensor(b).fill_(11)
+        target_label_12 = torch.Tensor(b).fill_(12)
+        target_label_13 = torch.Tensor(b).fill_(13)
+        target_label_14 = torch.Tensor(b).fill_(14)
+        target_label_15 = torch.Tensor(b).fill_(15)
+        target_label_16 = torch.Tensor(b).fill_(16)
+        target_label_17 = torch.Tensor(b).fill_(17)
+        target_label_18 = torch.Tensor(b).fill_(18)
+        target_label_19 = torch.Tensor(b).fill_(19)
+        target_label_20 = torch.Tensor(b).fill_(20)
+        target_label_21 = torch.Tensor(b).fill_(21)
+        target_label_22 = torch.Tensor(b).fill_(22)
+        target_label_23 = torch.Tensor(b).fill_(23)
+        target_label_24 = torch.Tensor(b).fill_(24)
+        target_label_25 = torch.Tensor(b).fill_(25)
+        target_label_26 = torch.Tensor(b).fill_(26)
+        target_label_27 = torch.Tensor(b).fill_(27)
+        target_label_28 = torch.Tensor(b).fill_(28)
+        target_label_29 = torch.Tensor(b).fill_(29)
+        target_label_30 = torch.Tensor(b).fill_(30)
+        target_label_31 = torch.Tensor(b).fill_(31)
+        target_label_32 = torch.Tensor(b).fill_(32)
+        target_label_33 = torch.Tensor(b).fill_(33)
+        target_label_34 = torch.Tensor(b).fill_(34)
+
+        target_label_35 = torch.Tensor(b).fill_(35)
+        target_label_36 = torch.Tensor(b).fill_(36)
+        target_label_37 = torch.Tensor(b).fill_(37)
+        target_label_38 = torch.Tensor(b).fill_(38)
+        target_label_39 = torch.Tensor(b).fill_(39)
+        target_label_40 = torch.Tensor(b).fill_(40)
+        target_label_41 = torch.Tensor(b).fill_(41)
+        target_label_42 = torch.Tensor(b).fill_(42)
+        target_label_43 = torch.Tensor(b).fill_(43)
+        target_label_44 = torch.Tensor(b).fill_(44)
+        target_label_45 = torch.Tensor(b).fill_(45)
+        target_label_46 = torch.Tensor(b).fill_(46)
+        target_label_47 = torch.Tensor(b).fill_(47)
+        target_label_48 = torch.Tensor(b).fill_(48)
+        target_label_49 = torch.Tensor(b).fill_(49)
+        target_label_50 = torch.Tensor(b).fill_(50)
+
+        target= torch.cat((target_label_0, target_label_1, target_label_2, target_label_3, target_label_4, target_label_5, target_label_6, target_label_7,
+                           target_label_8, target_label_9, target_label_10, target_label_11, target_label_12, target_label_13, target_label_14,
+                           target_label_15, target_label_16, target_label_17, target_label_18, target_label_19,target_label_20,target_label_21,
+                           target_label_22,target_label_23, target_label_24, target_label_25, target_label_26,target_label_27,target_label_28,
+                           target_label_29,target_label_30,target_label_31,target_label_32,target_label_33,target_label_34,target_label_35,target_label_36,target_label_37,target_label_38,target_label_39,target_label_40,target_label_41,target_label_42,target_label_43,target_label_44,target_label_45,target_label_46,target_label_47,target_label_48,target_label_49,target_label_50), 0)
+        target=target.long()        
+
         # print(label_0)
-        valid_index = torch.tensor([if_all_zero(label_0), if_all_zero(label_1), if_all_zero(label_2),if_all_zero(label_3),if_all_zero(label_4), if_all_zero(label_5),
+        valid_index = torch.cat((if_all_zero(label_0),if_all_zero(label_1), if_all_zero(label_2),if_all_zero(label_3),if_all_zero(label_4), if_all_zero(label_5),
                                     if_all_zero(label_6), if_all_zero(label_7), if_all_zero(label_8),if_all_zero(label_9),if_all_zero(label_10),if_all_zero(label_11),
                                     if_all_zero(label_12),if_all_zero(label_13),if_all_zero(label_14),if_all_zero(label_15),if_all_zero(label_16),if_all_zero(label_17),
                                     if_all_zero(label_18),if_all_zero(label_19),if_all_zero(label_20),if_all_zero(label_21),if_all_zero(label_22),if_all_zero(label_23),
@@ -345,7 +420,7 @@ class LGGANGenerator(BaseNetwork):
                                     if_all_zero(label_30),if_all_zero(label_31),if_all_zero(label_32),if_all_zero(label_33),if_all_zero(label_34),if_all_zero(label_35),
                                     if_all_zero(label_36),if_all_zero(label_37),if_all_zero(label_38),if_all_zero(label_39),if_all_zero(label_40),if_all_zero(label_41),
                                     if_all_zero(label_42),if_all_zero(label_43),if_all_zero(label_44),if_all_zero(label_45),if_all_zero(label_46),if_all_zero(label_47),
-                                    if_all_zero(label_48),if_all_zero(label_49),if_all_zero(label_50),if_all_zero(label_51)])
+                                    if_all_zero(label_48),if_all_zero(label_49),if_all_zero(label_50)),0)
         # print(valid_index)
 
 
