@@ -43,6 +43,10 @@ Also see our ACM MM 2020 paper [Dual Attention GANs for Semantic Image Synthesis
 
 <img src='./imgs/seg_ade20k.jpg' width=1200>
 
+### Generated Feature Maps on Cityscapes
+
+<img src='./imgs/feature_map.jpg' width=1200>
+
 ### [License](./LICENSE.md)
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />
 Copyright (C) 2020 University of Trento, Italy.
