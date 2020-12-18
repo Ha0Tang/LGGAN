@@ -58,8 +58,10 @@ Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-
 The code is released for academic research use only. For commercial use, please contact [hao.tang@unitn.it](hao.tang@unitn.it).
 
 ## Cross-View Image Translation
+Please refer to the [cross_view_translation](https://github.com/Ha0Tang/LGGAN/tree/master/cross_view_translation) folder for more details.
 
 ## Semantic Image Synthesis
+Please refer to the [semantic_image_synthesis](https://github.com/Ha0Tang/LGGAN/tree/master/semantic_image_synthesis) folder for more details.
 
 ## Acknowledgments
 This source code of cross-view image translation is inspired by [SelectionGAN](https://github.com/Ha0Tang/SelectionGAN), the source code of semantic image synthsis is inspired by [GauGAN/SPADE](https://github.com/NVlabs/SPADE).
