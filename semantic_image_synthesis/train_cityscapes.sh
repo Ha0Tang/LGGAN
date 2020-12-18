@@ -1,2 +1,2 @@
-python train.py --name LGGAN_cityscapes --dataset_mode cityscapes --dataroot ./datasets/cityscapes/data --niter 100 --niter_decay 100 --gpu_ids 0,1,2,3 --checkpoints_dir ./checkpoints --no_l1_loss --batchSize 8 
+python train.py --name LGGAN_cityscapes --dataset_mode cityscapes --dataroot ./datasets/cityscapes/data --niter 100 --niter_decay 100 --gpu_ids 0,1,2,3,4,5,6,7 --checkpoints_dir ./checkpoints --no_l1_loss --batchSize 8 
 # --continue_train;
