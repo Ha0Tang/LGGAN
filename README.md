@@ -8,6 +8,8 @@
 
 ## Contents
   - [Local and Global GAN](#Local-and-Global-GAN)
+  - [Cross-View Image Translation](#Cross-View-Image-Translation)
+  - [Semantic Image Synthesis](#Semantic-Image-Synthesis)
   - [Acknowledgments](#Acknowledgments)
   - [Related Projects](#Related-Projects)
   - [Citation](#Citation)
@@ -24,6 +26,10 @@ Also see our ACM MM 2020 paper [Dual Attention GANs for Semantic Image Synthesis
 
 ### Framework
 <img src='./imgs/framework.jpg' width=1200>
+
+### Cross-View Image Translation Results on Dayton and CVUSA
+
+<img src='./imgs/cross_view_results.jpg' width=1200>
 
 ### Semantic Image Synthesis Results on Cityscapes and ADE20K
 
@@ -46,12 +52,12 @@ Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-
 
 The code is released for academic research use only. For commercial use, please contact [hao.tang@unitn.it](hao.tang@unitn.it).
 
-## Installation
-Clone this repo.
-```bash
-git clone https://github.com/Ha0Tang/LGGAN
-cd LGGAN/
-```
+## Cross-View Image Translation
+
+## Semantic Image Synthesis
+
+## Acknowledgments
+This source code of cross-view image translation is inspired by [SelectionGAN](https://github.com/Ha0Tang/SelectionGAN), the source code of semantic image synthsis is inspired by [GauGAN/SPADE](https://github.com/NVlabs/SPADE).
 
 ## Related Projects
 **[SelectionGAN](https://github.com/Ha0Tang/SelectionGAN) | [EdgeGAN](https://github.com/Ha0Tang/EdgeGAN) | [DAGAN](https://github.com/Ha0Tang/DAGAN) | [PanoGAN](https://github.com/sswuai/PanoGAN) | [Guided-I2I-Translation-Papers](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)**
