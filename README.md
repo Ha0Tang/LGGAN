@@ -22,11 +22,10 @@
 
 **[Local Class-Specific and Global Image-Level Generative Adversarial Networks for Semantic-Guided Scene Generation](https://arxiv.org/abs/1912.12215)**  
 [Hao Tang](http://disi.unitn.it/~hao.tang/), [Dan Xu](http://www.robots.ox.ac.uk/~danxu/), [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/), [Philip H.S. Torr](https://scholar.google.com/citations?user=kPxa2w0AAAAJ&hl=en), [Nicu Sebe](https://scholar.google.com/citations?user=stFCYOAAAAAJ&hl=en).
-<br>In [CVPR 2020](http://cvpr2020.thecvf.com/).
-
+<br>In [CVPR 2020](http://cvpr2020.thecvf.com/).<br>
 The repository offers the official implementation of our paper in PyTorch.
 
-Also see our ACM MM 2020 paper [Dual Attention GANs for Semantic Image Synthesis](https://github.com/Ha0Tang/DAGAN), and arxiv paper [Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis](https://github.com/Ha0Tang/EdgeGAN).
+Also see our ACM MM 2020 paper [Dual Attention GANs for Semantic Image Synthesis](https://github.com/Ha0Tang/DAGAN), and Arxiv paper [Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis](https://github.com/Ha0Tang/EdgeGAN).
 
 ### Framework
 <img src='./imgs/framework.jpg' width=1200>
