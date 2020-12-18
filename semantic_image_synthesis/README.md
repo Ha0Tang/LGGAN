@@ -25,11 +25,11 @@ pip install -r requirements.txt
 
 This code also requires the Synchronized-BatchNorm-PyTorch rep.
 ```
-cd semantic_image_synthesis/
-cd models/networks/
-git clone https://github.com/vacancy/Synchronized-BatchNorm-PyTorch
-cp -rf Synchronized-BatchNorm-PyTorch/sync_batchnorm .
-cd ../../
+cd semantic_image_synthesis/;
+cd models/networks/;
+git clone https://github.com/vacancy/Synchronized-BatchNorm-PyTorch;
+cp -rf Synchronized-BatchNorm-PyTorch/sync_batchnorm .;
+cd ../../;
 ```
 
 To reproduce the results reported in the paper, you would need an NVIDIA DGX1 machine with 8 V100 GPUs.
