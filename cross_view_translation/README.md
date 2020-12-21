@@ -4,6 +4,7 @@
   - [Dataset Preparation](#Dataset-Preparation)
   - [Generating Images Using Pretrained Model](#Generating-Images-Using-Pretrained-Model)
   - [Train and Test New Models](#Train-and-Test-New-Models)
+  - [Code Structure](#Code-Structure)
   - [Evaluation](#Evaluation)
 
 ## Installation
