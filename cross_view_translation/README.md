@@ -13,6 +13,7 @@ Clone this repo.
 ```bash
 git clone https://github.com/Ha0Tang/LGGAN
 cd LGGAN/
+cd cross_view_translation/
 ```
 
 This code requires PyTorch 0.4.1 and python 3.6+. Please install dependencies by
