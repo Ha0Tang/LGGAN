@@ -29,11 +29,11 @@ To reproduce the results reported in the paper, you would need a NVIDIA GeForce 
 
 ## Dataset Preparation
 
-For SVA, Dayton or CVUSA, the datasets must be downloaded beforehand. Please download them on the respective webpages. In addition, we put a few sample images in this [code repo](https://github.com/Ha0Tang/LGGAN/tree/master/datasets/samples). Please cite their papers if you use the data. 
+For SVA, Dayton or CVUSA, the datasets must be downloaded beforehand. Please download them on the respective webpages. In addition, we put a few sample images in this [code repo](https://github.com/Ha0Tang/LGGAN/tree/master/cross_view_translation/datasets/samples). Please cite their papers if you use the data. 
 
 **Preparing SVA Dataset**. The dataset can be downloaded [here](http://imagelab.ing.unimore.it/imagelab/page.asp?IdPage=19).
 Ground Truth semantic maps are not available for this datasets. We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
-Train/Test splits for SVA dataset can be downloaded from [here](https://github.com/Ha0Tang/LGGAN/tree/master/datasets/sva_split).
+Train/Test splits for SVA dataset can be downloaded from [here](https://github.com/Ha0Tang/LGGAN/tree/master/cross_view_translation/datasets/sva_split).
 
 **Preparing Dayton Dataset**. The dataset can be downloaded [here](https://github.com/lugiavn/gt-crossview). In particular, you will need to download dayton.zip. 
 Ground Truth semantic maps are not available for this datasets. We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
@@ -41,7 +41,7 @@ Train/Test splits for Dayton dataset can be downloaded from [here](https://githu
 
 **Preparing CVUSA Dataset**. The dataset can be downloaded [here](https://drive.google.com/drive/folders/0BzvmHzyo_zCAX3I4VG1mWnhmcGc), which is from the [page](http://cs.uky.edu/~jacobs/datasets/cvusa/). After unzipping the dataset, prepare the training and testing data as discussed in [SelectionGAN](https://arxiv.org/abs/1904.06807). We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
 
-**Dataset Pre-processing**. After downloading the dataset, prepare the data like [here](https://github.com/Ha0Tang/LocalGlobalGAN/tree/master/datasets/others/sva), then run the following script to generate the data like [here](https://github.com/Ha0Tang/LGGAN/tree/master/datasets/samples) for training and testing:
+**Dataset Pre-processing**. After downloading the dataset, prepare the data like [here](https://github.com/Ha0Tang/LGGAN/tree/master/cross_view_translation/datasets/others/sva), then run the following script to generate the data like [here](https://github.com/Ha0Tang/LGGAN/tree/master/cross_view_translation/datasets/samples) for training and testing:
 ```
 matlab -nodesktop -nosplash -r "data_preprocessing"
 ```
@@ -57,7 +57,7 @@ Once the dataset is ready. The result images can be generated using pretrained m
 ```
 bash ./scripts/download_lggan_model.sh sva
 ```
-The pretrained model is saved at `./checkpoints/[type]_pretrained`. Check [here](https://github.com/Ha0Tang/LGGAN/blob/master/scripts/download_lggan_model.sh) for all the available LGGAN models.
+The pretrained model is saved at `./checkpoints/[type]_pretrained`. Check [here](https://github.com/Ha0Tang/LGGAN/blob/master/cross_view_translation/scripts/download_lggan_model.sh) for all the available LGGAN models.
 
 2. Generate images using the pretrained model.
 ```bash
