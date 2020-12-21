@@ -101,7 +101,7 @@ New models can be trained and tested with the following commands.
 For SVA dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=0;
-python train.py --dataroot ./datasets/sva_local_global 
+python train.py --dataroot ./datasets/sva_lggan 
 	--name sva_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
@@ -117,7 +117,7 @@ python train.py --dataroot ./datasets/sva_local_global
 	--niter_decay 10 \
 	--display_id 0
 
-python test.py --dataroot ./datasets/sva_local_global \
+python test.py --dataroot ./datasets/sva_lggan \
 	--name sva_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
@@ -135,7 +135,7 @@ python test.py --dataroot ./datasets/sva_local_global \
 For CVUSA dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=1;
-python train.py --dataroot ./dataset/cvusa_local_global \
+python train.py --dataroot ./dataset/cvusa_lggan \
 	--name cvusa_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
@@ -151,7 +151,7 @@ python train.py --dataroot ./dataset/cvusa_local_global \
 	--niter_decay 15 \
 	--display_id 0
 
-python test.py --dataroot ./dataset/cvusa_local_global \
+python test.py --dataroot ./dataset/cvusa_lggan \
 	--name cvusa_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
@@ -169,7 +169,7 @@ python test.py --dataroot ./dataset/cvusa_local_global \
 For Dayton (a2g direction, 256) dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=6;
-python train.py --dataroot ./datasets/dayton_a2g_local_global \
+python train.py --dataroot ./datasets/dayton_a2g_lggan \
 	--name dayton_a2g_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
@@ -185,7 +185,7 @@ python train.py --dataroot ./datasets/dayton_a2g_local_global \
 	--niter 20 \
 	--niter_decay 15
 
-python test.py --dataroot ./datasets/dayton_a2g_local_global \
+python test.py --dataroot ./datasets/dayton_a2g_lggan \
 	--name dayton_a2g_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
@@ -203,7 +203,7 @@ python test.py --dataroot ./datasets/dayton_a2g_local_global \
 For Dayton (g2a direction, 256) dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=5;
-python train.py --dataroot ./datasets/dayton_g2a_local_global \
+python train.py --dataroot ./datasets/dayton_g2a_lggan \
 	--name dayton_g2a_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
@@ -219,7 +219,7 @@ python train.py --dataroot ./datasets/dayton_g2a_local_global \
 	--niter 20 \
 	--niter_decay 15
 
-python test.py --dataroot ./datasets/dayton_g2a_local_global \
+python test.py --dataroot ./datasets/dayton_g2a_lggan \
 	--name dayton_g2a_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
@@ -237,7 +237,7 @@ python test.py --dataroot ./datasets/dayton_g2a_local_global \
 For Dayton (a2g direction, 64) dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=7;
-python train.py --dataroot ./datasets/dayton_a2g_local_global \
+python train.py --dataroot ./datasets/dayton_a2g_lggan \
 	--name dayton_a2g_64_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
@@ -253,7 +253,7 @@ python train.py --dataroot ./datasets/dayton_a2g_local_global \
 	--niter 50 \
 	--niter_decay 50
 
-python test.py --dataroot ./datasets/dayton_a2g_local_global \
+python test.py --dataroot ./datasets/dayton_a2g_lggan \
 	--name dayton_a2g_64_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
@@ -271,7 +271,7 @@ python test.py --dataroot ./datasets/dayton_a2g_local_global \
 For Dayton (g2a direction, 64) dataset:
 ```bash
 export CUDA_VISIBLE_DEVICES=7;
-python train.py --dataroot ./datasets/dayton_g2a_local_global \
+python train.py --dataroot ./datasets/dayton_g2a_lggan \
 	--name dayton_g2a_64_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
@@ -287,7 +287,7 @@ python train.py --dataroot ./datasets/dayton_g2a_local_global \
 	--niter 50 \
 	--niter_decay 50
 
-python test.py --dataroot ./datasets/dayton_g2a_local_global \
+python test.py --dataroot ./datasets/dayton_g2a_lggan \
 	--name dayton_g2a_64_lggan \
 	--model lggan \
 	--which_model_netG resnet_9blocks \
