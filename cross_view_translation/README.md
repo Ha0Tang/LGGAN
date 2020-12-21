@@ -53,7 +53,7 @@ sh datasets/download_lggan_dataset.sh [dataset]
 ```
 where `[dataset]` can be one of `cvusa_lggan`, `dayton_lggan`, `dayton_ablation_lggan`, or `sva_lggan`.
 
-**Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ia,Ig,Sa,Sg,la,lg}, where Ia=aerial image, Ig=ground image, Sa=color semantic map for aerial image, Sg=color semantic map for ground image, Sa=semantic label for aerial image, Sg=semantic label for ground image. Of course, you can use LGGAN for your own datasets and tasks.
+**Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ia,Ig,Sa,Sg,La,Lg}, where Ia=aerial image, Ig=ground image, Sa=color semantic map for aerial image, Sg=color semantic map for ground image, La=semantic label for aerial image, Lg=semantic label for ground image. Of course, you can use LGGAN for your own datasets and tasks.
 
 ## Generating Images Using Pretrained Model
 
@@ -84,7 +84,7 @@ python test.py --dataroot [path_to_dataset] \
 ```
 
 `[path_to_dataset]` is the path to the dataset. Dataset can be one of `sva`, `dayton_a2g`, `dayton_g2a` and `cvusa`. `[type]_pretrained` is the directory name of the checkpoint file downloaded in Step 1, which should be one of `sva_pretrained`, `dayton_a2g_64_pretrained`, `dayton_g2a_64_pretrained`, `dayton_a2g_pretrained`, `dayton_g2a_pretrained` and `cvusa_pretrained`. 
-If you are running on CPU mode, change `--gpu_ids 0` to `--gpu_ids -1`. For [`BS`, `LS`, `FS`], please see `Training & Testing` sections.
+If you are running on CPU mode, change `--gpu_ids 0` to `--gpu_ids -1`. For [`BS`, `LS`, `FS`], please see `Train & Test` sections.
 
 Note that testing require large amount of disk space. If you don't have enough space, append `--saveDisk` on the command line.
     
