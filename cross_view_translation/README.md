@@ -48,6 +48,10 @@ matlab -nodesktop -nosplash -r "data_preprocessing"
 ```
 
 We also provide the prepared datasets for your convience.
+```
+sh datasets/download_lggan_dataset.sh [dataset]
+```
+where `[dataset]` can be one of `cvusa_lggan`, `dayton_lggan`, `dayton_ablation_lggan`, or `sva_lggan`.
 
 **Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ia,Ig,Sa,Sg,la,lg}, where Ia=aerial image, Ig=ground image, Sa=color semantic map for aerial image, Sg=color semantic map for ground image, Sa=semantic label for aerial image, Sg=semantic label for ground image. Of course, you can use LGGAN for your own datasets and tasks.
 
