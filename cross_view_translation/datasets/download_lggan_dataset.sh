@@ -1,6 +1,6 @@
 FILE=$1
 
-if [[ $FILE != "cvusa_lggan" && $FILE != "dayton_lggan" && $FILE != "dayton_ablation_lggan" && $FILE != "sva_lggan"]]; 
+if [[ $FILE != "cvusa_lggan" && $FILE != "dayton_lggan" && $FILE != "dayton_ablation_lggan" && $FILE != "sva_lggan" ]]; 
 	then echo "Available datasets are cvusa_lggan, dayton_lggan, dayton_ablation_lggan, sva_lggan"
 	exit 1
 fi
