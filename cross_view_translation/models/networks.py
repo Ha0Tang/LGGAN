@@ -577,13 +577,13 @@ class ResnetGenerator_local(nn.Module):
             x = self.resnet_blocks8(x)
             middle_x = self.resnet_blocks9(x)
 
-            print(middle_x.size())
+            # print(middle_x.size())
             # x = F.relu(self.deconv1_norm(self.deconv1(x)))
             # x = F.relu(self.deconv2_norm(self.deconv2(x)))
             x_local = F.relu(self.deconv3_norm_local(self.deconv3_local(middle_x)))
-            print(x_local.size())
+            # print(x_local.size())
             x_feature_local = F.relu(self.deconv4_norm_local(self.deconv4_local(x_local)))
-            print(x_feature_local.size())
+            # print(x_feature_local.size())
             # attention = x[:, :1, :, :]
             # print(attention.size())
             # attention = self.conv1_2(attention)
@@ -592,7 +592,7 @@ class ResnetGenerator_local(nn.Module):
             # [4,64,256,256]
 
             label_1 = x_feature_local*mask_1_64
-            print(mask_1_64.size())
+            # print(mask_1_64.size())
             # print(x.size())
             # print(mask_1_64.size())
             label_2 = x_feature_local*mask_2_64
@@ -611,7 +611,7 @@ class ResnetGenerator_local(nn.Module):
 
 
             result_1 = torch.tanh(self.deconv5_1(label_1))
-            print(result_1.size())
+            # print(result_1.size())
             result_2 = torch.tanh(self.deconv5_2(label_2))
             result_3 = torch.tanh(self.deconv5_3(label_3))
             result_4 = torch.tanh(self.deconv5_4(label_4))

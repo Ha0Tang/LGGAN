@@ -7,9 +7,9 @@ from PIL import Image
 import numpy as np
 from matplotlib import cm
 
-class Pix2PixModel(BaseModel):
+class LGGANModel(BaseModel):
     def name(self):
-        return 'Pix2PixModel'
+        return 'LGGANModel'
 
     @staticmethod
     def modify_commandline_options(parser, is_train=True):
