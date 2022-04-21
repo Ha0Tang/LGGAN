@@ -90,38 +90,6 @@ LGGAN
 }
 ```
 
-DPGAN
-```
-@article{tang2021layout,
-  title={Layout-to-image translation with double pooling generative adversarial networks},
-  author={Tang, Hao and Sebe, Nicu},
-  journal={IEEE Transactions on Image Processing (TIP)},
-  volume={30},
-  pages={7903--7913},
-  year={2021}
-}
-```
-
-EdgeGAN
-```
-@article{tang2020edge,
-  title={Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis},
-  author={Tang, Hao and Qi, Xiaojuan and Xu, Dan and Torr, Philip HS and Sebe, Nicu},
-  journal={arXiv preprint arXiv:2003.13898},
-  year={2020}
-}
-```
-
-DAGAN
-```
-@inproceedings{tang2020dual,
-  title={Dual Attention GANs for Semantic Image Synthesis},
-  author={Tang, Hao and Bai, Song and Sebe, Nicu},
-  booktitle ={ACM MM},
-  year={2020}
-}
-```
-
 SelectionGAN
 ```
 @inproceedings{tang2019multi,
@@ -138,6 +106,39 @@ SelectionGAN
   year={2020}
 }
 ```
+
+EdgeGAN
+```
+@article{tang2020edge,
+  title={Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis},
+  author={Tang, Hao and Qi, Xiaojuan and Xu, Dan and Torr, Philip HS and Sebe, Nicu},
+  journal={arXiv preprint arXiv:2003.13898},
+  year={2020}
+}
+```
+
+DPGAN
+```
+@article{tang2021layout,
+  title={Layout-to-image translation with double pooling generative adversarial networks},
+  author={Tang, Hao and Sebe, Nicu},
+  journal={IEEE Transactions on Image Processing (TIP)},
+  volume={30},
+  pages={7903--7913},
+  year={2021}
+}
+```
+
+DAGAN
+```
+@inproceedings{tang2020dual,
+  title={Dual Attention GANs for Semantic Image Synthesis},
+  author={Tang, Hao and Bai, Song and Sebe, Nicu},
+  booktitle ={ACM MM},
+  year={2020}
+}
+```
+
 
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([bjdxtanghao@gmail.com](bjdxtanghao@gmail.com)).
