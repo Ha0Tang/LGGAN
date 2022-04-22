@@ -23,7 +23,7 @@
 <br>In [CVPR 2020](http://cvpr2020.thecvf.com/).<br>
 The repository offers the official implementation of our paper in PyTorch.
 
-In the meantime, check out our related ACM MM 2020 paper [Dual Attention GANs for Semantic Image Synthesis](https://github.com/Ha0Tang/DAGAN), and Arxiv paper [Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis](https://github.com/Ha0Tang/EdgeGAN).
+In the meantime, check out our related ACM MM 2020 paper [Dual Attention GANs for Semantic Image Synthesis](https://github.com/Ha0Tang/DAGAN), TIP 2021 paper [Layout-to-Image Translation with Double Pooling Generative Adversarial Networks](https://github.com/Ha0Tang/DPGAN), and Arxiv paper [Edge Guided GANs with Semantic Preserving for Semantic Image Synthesis](https://github.com/Ha0Tang/EdgeGAN).
 
 ### Framework
 <img src='./imgs/framework.jpg' width=1200>
