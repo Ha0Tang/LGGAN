@@ -139,6 +139,16 @@ DAGAN
 }
 ```
 
+PanoGAN
+```
+@article{wu2022cross,
+  title={Cross-View Panorama Image Synthesis},
+  author={Wu, Songsong and Tang, Hao and Jing, Xiao-Yuan and Zhao, Haifeng and Qian, Jianjun and Sebe, Nicu and Yan, Yan},
+  journal={IEEE Transactions on Multimedia (TMM)},
+  year={2022}
+}
+```
+
 
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([bjdxtanghao@gmail.com](bjdxtanghao@gmail.com)).
