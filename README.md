@@ -69,7 +69,7 @@ Please refer to the [semantic_image_synthesis](https://github.com/Ha0Tang/LGGAN/
 This source code of cross-view image translation is inspired by [SelectionGAN](https://github.com/Ha0Tang/SelectionGAN), the source code of semantic image synthsis is inspired by [GauGAN/SPADE](https://github.com/NVlabs/SPADE).
 
 ## Related Projects
-**[SelectionGAN](https://github.com/Ha0Tang/SelectionGAN) | [EdgeGAN](https://github.com/Ha0Tang/EdgeGAN) | [DPGAN](https://github.com/Ha0Tang/DPGAN) | [DAGAN](https://github.com/Ha0Tang/DAGAN) | [PanoGAN](https://github.com/sswuai/PanoGAN) | [Guided-I2I-Translation-Papers](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)**
+**[SelectionGAN](https://github.com/Ha0Tang/SelectionGAN) | [ECGAN](https://github.com/Ha0Tang/ECGAN) | [DPGAN](https://github.com/Ha0Tang/DPGAN) | [DAGAN](https://github.com/Ha0Tang/DAGAN) | [PanoGAN](https://github.com/sswuai/PanoGAN) | [Guided-I2I-Translation-Papers](https://github.com/Ha0Tang/Guided-I2I-Translation-Papers)**
 
 ## Citation
 If you use this code for your research, please cite our papers.
@@ -108,7 +108,7 @@ SelectionGAN
 }
 ```
 
-EdgeGAN
+ECGAN
 ```
 @article{tang2023edge,
   title={Edge Guided GANs with Contrastive Learning for Semantic Image Synthesis},
